@@ -1,695 +1,559 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="https://materialsvirtuallab.org/xmlrpc.php">
-
-<title>Materials Virtual Lab &#8211; Advancing Materials Science through AI</title>
-<meta name='robots' content='max-image-preview:large' />
-	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
-	<link rel='dns-prefetch' href='//secure.gravatar.com' />
-<link rel='dns-prefetch' href='//stats.wp.com' />
-<link rel='dns-prefetch' href='//v0.wordpress.com' />
-<link rel='preconnect' href='//i0.wp.com' />
-<link rel='preconnect' href='//c0.wp.com' />
-<link rel="alternate" type="application/rss+xml" title="Materials Virtual Lab &raquo; Feed" href="https://materialsvirtuallab.org/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Materials Virtual Lab &raquo; Comments Feed" href="https://materialsvirtuallab.org/comments/feed/" />
-<link rel='stylesheet' id='sydney-bootstrap-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-block-library-css' href='https://c0.wp.com/c/6.8.3/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
-<style id='wp-block-library-inline-css' type='text/css'>
-.wp-block-image.is-style-sydney-rounded img { border-radius:30px; }
-.wp-block-gallery.is-style-sydney-rounded img { border-radius:30px; }
-</style>
-<style id='global-styles-inline-css' type='text/css'>
-:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--global-color-1: var(--sydney-global-color-1);--wp--preset--color--global-color-2: var(--sydney-global-color-2);--wp--preset--color--global-color-3: var(--sydney-global-color-3);--wp--preset--color--global-color-4: var(--sydney-global-color-4);--wp--preset--color--global-color-5: var(--sydney-global-color-5);--wp--preset--color--global-color-6: var(--sydney-global-color-6);--wp--preset--color--global-color-7: var(--sydney-global-color-7);--wp--preset--color--global-color-8: var(--sydney-global-color-8);--wp--preset--color--global-color-9: var(--sydney-global-color-9);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 10px;--wp--preset--spacing--30: 20px;--wp--preset--spacing--40: 30px;--wp--preset--spacing--50: clamp(30px, 5vw, 60px);--wp--preset--spacing--60: clamp(30px, 7vw, 80px);--wp--preset--spacing--70: clamp(50px, 7vw, 100px);--wp--preset--spacing--80: clamp(50px, 10vw, 120px);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 740px;--wp--style--global--wide-size: 1140px; }:where(body) { margin: 0; }.wp-site-blocks { padding-top: var(--wp--style--root--padding-top); padding-bottom: var(--wp--style--root--padding-bottom); }.has-global-padding { padding-right: var(--wp--style--root--padding-right); padding-left: var(--wp--style--root--padding-left); }.has-global-padding > .alignfull { margin-right: calc(var(--wp--style--root--padding-right) * -1); margin-left: calc(var(--wp--style--root--padding-left) * -1); }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) { padding-right: 0; padding-left: 0; }.has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.wp-block-block, .alignfull)) > .alignfull { margin-left: 0; margin-right: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{--wp--style--root--padding-top: 0px;--wp--style--root--padding-right: 0px;--wp--style--root--padding-bottom: 0px;--wp--style--root--padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-global-color-1-color{color: var(--wp--preset--color--global-color-1) !important;}.has-global-color-2-color{color: var(--wp--preset--color--global-color-2) !important;}.has-global-color-3-color{color: var(--wp--preset--color--global-color-3) !important;}.has-global-color-4-color{color: var(--wp--preset--color--global-color-4) !important;}.has-global-color-5-color{color: var(--wp--preset--color--global-color-5) !important;}.has-global-color-6-color{color: var(--wp--preset--color--global-color-6) !important;}.has-global-color-7-color{color: var(--wp--preset--color--global-color-7) !important;}.has-global-color-8-color{color: var(--wp--preset--color--global-color-8) !important;}.has-global-color-9-color{color: var(--wp--preset--color--global-color-9) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-global-color-1-background-color{background-color: var(--wp--preset--color--global-color-1) !important;}.has-global-color-2-background-color{background-color: var(--wp--preset--color--global-color-2) !important;}.has-global-color-3-background-color{background-color: var(--wp--preset--color--global-color-3) !important;}.has-global-color-4-background-color{background-color: var(--wp--preset--color--global-color-4) !important;}.has-global-color-5-background-color{background-color: var(--wp--preset--color--global-color-5) !important;}.has-global-color-6-background-color{background-color: var(--wp--preset--color--global-color-6) !important;}.has-global-color-7-background-color{background-color: var(--wp--preset--color--global-color-7) !important;}.has-global-color-8-background-color{background-color: var(--wp--preset--color--global-color-8) !important;}.has-global-color-9-background-color{background-color: var(--wp--preset--color--global-color-9) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-global-color-1-border-color{border-color: var(--wp--preset--color--global-color-1) !important;}.has-global-color-2-border-color{border-color: var(--wp--preset--color--global-color-2) !important;}.has-global-color-3-border-color{border-color: var(--wp--preset--color--global-color-3) !important;}.has-global-color-4-border-color{border-color: var(--wp--preset--color--global-color-4) !important;}.has-global-color-5-border-color{border-color: var(--wp--preset--color--global-color-5) !important;}.has-global-color-6-border-color{border-color: var(--wp--preset--color--global-color-6) !important;}.has-global-color-7-border-color{border-color: var(--wp--preset--color--global-color-7) !important;}.has-global-color-8-border-color{border-color: var(--wp--preset--color--global-color-8) !important;}.has-global-color-9-border-color{border-color: var(--wp--preset--color--global-color-9) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
-:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
-</style>
-<link rel='stylesheet' id='sydney-style-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/style.css?ver=20230821' type='text/css' media='all' />
-<!--[if lte IE 9]>
-<link rel='stylesheet' id='sydney-ie9-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/css/ie9.css?ver=20250902' type='text/css' media='all' />
-<![endif]-->
-<link rel='stylesheet' id='sydney-hero-slider-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/css/components/hero-slider.min.css?ver=20220824' type='text/css' media='all' />
-<link rel='stylesheet' id='sydney-siteorigin-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/css/components/siteorigin.min.css?ver=20251002' type='text/css' media='all' />
-<link rel='stylesheet' id='sydney-font-awesome-v5-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/fonts/font-awesome-v5/all.min.css?ver=20250902' type='text/css' media='all' />
-<link rel='stylesheet' id='sydney-style-min-css' href='https://materialsvirtuallab.org/wp-content/themes/sydney/css/styles.min.css?ver=20250404' type='text/css' media='all' />
-<style id='sydney-style-min-inline-css' type='text/css'>
-.woocommerce ul.products li.product{text-align:center;}html{scroll-behavior:smooth;}.header-image{background-size:cover;}.header-image{height:300px;}:root{--sydney-global-color-1:#af0011;--sydney-global-color-2:#b73d3d;--sydney-global-color-3:#233452;--sydney-global-color-4:#00102E;--sydney-global-color-5:#6d7685;--sydney-global-color-6:#00102E;--sydney-global-color-7:#F4F5F7;--sydney-global-color-8:#dbdbdb;--sydney-global-color-9:#ffffff;}.llms-student-dashboard .llms-button-secondary:hover,.llms-button-action:hover,.read-more-gt,.widget-area .widget_fp_social a,#mainnav ul li a:hover,.sydney_contact_info_widget span,.roll-team .team-content .name,.roll-team .team-item .team-pop .team-social li:hover a,.roll-infomation li.address:before,.roll-infomation li.phone:before,.roll-infomation li.email:before,.roll-testimonials .name,.roll-button.border,.roll-button:hover,.roll-icon-list .icon i,.roll-icon-list .content h3 a:hover,.roll-icon-box.white .content h3 a,.roll-icon-box .icon i,.roll-icon-box .content h3 a:hover,.switcher-container .switcher-icon a:focus,.go-top:hover,.hentry .meta-post a:hover,#mainnav > ul > li > a.active,#mainnav > ul > li > a:hover,button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.text-color,.social-menu-widget a,.social-menu-widget a:hover,.archive .team-social li a,a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.classic-alt .meta-post a,.single .hentry .meta-post a,.content-area.modern .hentry .meta-post span:before,.content-area.modern .post-cat{color:var(--sydney-global-color-1)}.llms-student-dashboard .llms-button-secondary,.llms-button-action,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.project-filter li a.active,.project-filter li a:hover,.preloader .pre-bounce1,.preloader .pre-bounce2,.roll-team .team-item .team-pop,.roll-progress .progress-animate,.roll-socials li a:hover,.roll-project .project-item .project-pop,.roll-project .project-filter li.active,.roll-project .project-filter li:hover,.roll-button.light:hover,.roll-button.border:hover,.roll-button,.roll-icon-box.white .icon,.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span,.go-top,.bottom .socials li:hover a,.sidebar .widget:before,.blog-pagination ul li.active,.blog-pagination ul li:hover a,.content-area .hentry:after,.text-slider .maintitle:after,.error-wrap #search-submit:hover,#mainnav .sub-menu li:hover > a,#mainnav ul li ul:after,button,input[type="button"],input[type="reset"],input[type="submit"],.panel-grid-cell .widget-title:after,.cart-amount{background-color:var(--sydney-global-color-1)}.llms-student-dashboard .llms-button-secondary,.llms-student-dashboard .llms-button-secondary:hover,.llms-button-action,.llms-button-action:hover,.roll-socials li a:hover,.roll-socials li a,.roll-button.light:hover,.roll-button.border,.roll-button,.roll-icon-list .icon,.roll-icon-box .icon,.owl-theme .owl-controls .owl-page span,.comment .comment-detail,.widget-tags .tag-list a:hover,.blog-pagination ul li,.error-wrap #search-submit:hover,textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,button,input[type="button"],input[type="reset"],input[type="submit"],.archive .team-social li a{border-color:var(--sydney-global-color-1)}.sydney_contact_info_widget span{fill:var(--sydney-global-color-1);}.go-top:hover svg{stroke:var(--sydney-global-color-1);}.site-header.float-header{background-color:rgba(0,0,0,0.9);}@media only screen and (max-width:1024px){.site-header{background-color:#000000;}}#mainnav ul li a,#mainnav ul li::before{color:#ffffff}#mainnav .sub-menu li a{color:#ffffff}#mainnav .sub-menu li a{background:#1c1c1c}.text-slider .maintitle,.text-slider .subtitle{color:#ffffff}body{color:}#secondary{background-color:#ffffff}#secondary,#secondary a:not(.wp-block-button__link){color:#6d7685}.btn-menu .sydney-svg-icon{fill:#ffffff}#mainnav ul li a:hover,.main-header #mainnav .menu > li > a:hover{color:#d65050}.overlay{background-color:#000000}.page-wrap{padding-top:83px;}.page-wrap{padding-bottom:100px;}.slide-inner{display:none;}.slide-inner.text-slider-stopped{display:block;}@media only screen and (max-width:1025px){.mobile-slide{display:block;}.slide-item{background-image:none !important;}.header-slider{}.slide-item{height:auto !important;}.slide-inner{min-height:initial;}}.go-top.show{border-radius:2px;bottom:10px;}.go-top.position-right{right:20px;}.go-top.position-left{left:20px;}.go-top{background-color:;}.go-top:hover{background-color:;}.go-top{color:;}.go-top svg{stroke:;}.go-top:hover{color:;}.go-top:hover svg{stroke:;}.go-top .sydney-svg-icon,.go-top .sydney-svg-icon svg{width:16px;height:16px;}.go-top{padding:15px;}@media (min-width:992px){.site-info{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.site-info{font-size:16px;}}@media (max-width:575px){.site-info{font-size:16px;}}.site-info{border-top:0;}.footer-widgets-grid{gap:30px;}@media (min-width:992px){.footer-widgets-grid{padding-top:95px;padding-bottom:95px;}}@media (min-width:576px) and (max-width:991px){.footer-widgets-grid{padding-top:60px;padding-bottom:60px;}}@media (max-width:575px){.footer-widgets-grid{padding-top:60px;padding-bottom:60px;}}@media (min-width:992px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (min-width:576px) and (max-width:991px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (max-width:575px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (min-width:992px){.footer-widgets{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.footer-widgets{font-size:16px;}}@media (max-width:575px){.footer-widgets{font-size:16px;}}.footer-widgets{background-color:;}.sidebar-column .widget .widget-title{color:;}.sidebar-column .widget h1,.sidebar-column .widget h2,.sidebar-column .widget h3,.sidebar-column .widget h4,.sidebar-column .widget h5,.sidebar-column .widget h6{color:;}.sidebar-column .widget{color:;}#sidebar-footer .widget a{color:;}#sidebar-footer .widget a:hover{color:;}.site-footer{background-color:;}.site-info,.site-info a{color:;}.site-info .sydney-svg-icon svg{fill:;}.site-info{padding-top:20px;padding-bottom:20px;}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,.wp-block-button.is-style-outline a,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,.wp-block-button.is-style-outline a,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,.wp-block-button.is-style-outline a,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,.wp-block-button.is-style-outline a,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,.wp-block-button.is-style-outline a,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,.wp-block-button.is-style-outline a,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{border-radius:0;}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{text-transform:uppercase;}button,.wp-element-button,div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=submit],div.wpforms-container-full:not(.wpforms-block) .wpforms-form button[type=submit],div.wpforms-container-full:not(.wpforms-block) .wpforms-form .wpforms-page-button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{background-color:;}button:hover,.wp-element-button:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=submit]:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form button[type=submit]:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{background-color:;}button,#sidebar-footer a.wp-block-button__link,.wp-element-button,div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=submit],div.wpforms-container-full:not(.wpforms-block) .wpforms-form button[type=submit],div.wpforms-container-full:not(.wpforms-block) .wpforms-form .wpforms-page-button,.checkout-button.button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{color:;}button:hover,#sidebar-footer .wp-block-button__link:hover,.wp-element-button:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=submit]:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form button[type=submit]:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{color:;}.is-style-outline .wp-block-button__link,div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=submit],div.wpforms-container-full:not(.wpforms-block) .wpforms-form button[type=submit],div.wpforms-container-full:not(.wpforms-block) .wpforms-form .wpforms-page-button,.roll-button,.wp-block-button__link.is-style-outline,button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{border-color:;}button:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=submit]:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form button[type=submit]:hover,div.wpforms-container-full:not(.wpforms-block) .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{border-color:;}.posts-layout .list-image{width:30%;}.posts-layout .list-content{width:70%;}.content-area:not(.layout4):not(.layout6) .posts-layout .entry-thumb{margin:0 0 24px 0;}.layout4 .entry-thumb,.layout6 .entry-thumb{margin:0 24px 0 0;}.layout6 article:nth-of-type(even) .list-image .entry-thumb{margin:0 0 0 24px;}.posts-layout .entry-header{margin-bottom:24px;}.posts-layout .entry-meta.below-excerpt{margin:15px 0 0;}.posts-layout .entry-meta.above-title{margin:0 0 15px;}.single .entry-header .entry-title{color:;}.single .entry-header .entry-meta,.single .entry-header .entry-meta a{color:;}@media (min-width:992px){.single .entry-meta{font-size:12px;}}@media (min-width:576px) and (max-width:991px){.single .entry-meta{font-size:12px;}}@media (max-width:575px){.single .entry-meta{font-size:12px;}}@media (min-width:992px){.single .entry-header .entry-title{font-size:48px;}}@media (min-width:576px) and (max-width:991px){.single .entry-header .entry-title{font-size:32px;}}@media (max-width:575px){.single .entry-header .entry-title{font-size:32px;}}.posts-layout .entry-post{color:#233452;}.posts-layout .entry-title a{color:#00102E;}.posts-layout .author,.posts-layout .entry-meta a{color:#6d7685;}@media (min-width:992px){.posts-layout .entry-post{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-post{font-size:16px;}}@media (max-width:575px){.posts-layout .entry-post{font-size:16px;}}@media (min-width:992px){.posts-layout .entry-meta{font-size:12px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-meta{font-size:12px;}}@media (max-width:575px){.posts-layout .entry-meta{font-size:12px;}}@media (min-width:992px){.posts-layout .entry-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-title{font-size:32px;}}@media (max-width:575px){.posts-layout .entry-title{font-size:32px;}}.single .entry-header{margin-bottom:40px;}.single .entry-thumb{margin-bottom:40px;}.single .entry-meta-above{margin-bottom:24px;}.single .entry-meta-below{margin-top:24px;}@media (min-width:992px){.custom-logo-link img{max-width:180px;}}@media (min-width:576px) and (max-width:991px){.custom-logo-link img{max-width:100px;}}@media (max-width:575px){.custom-logo-link img{max-width:100px;}}.main-header,.bottom-header-row{border-bottom:0 solid rgba(255,255,255,0.1);}.header_layout_3,.header_layout_4,.header_layout_5{border-bottom:1px solid rgba(255,255,255,0.1);}.main-header:not(.sticky-active),.header-search-form{background-color:#0a0000;}.main-header.sticky-active{background-color:;}.main-header .site-title a,.main-header .site-description,.main-header #mainnav .menu > li > a,#mainnav .nav-menu > li > a,.main-header .header-contact a{color:;}.main-header .sydney-svg-icon svg,.main-header .dropdown-symbol .sydney-svg-icon svg{fill:;}.sticky-active .main-header .site-title a,.sticky-active .main-header .site-description,.sticky-active .main-header #mainnav .menu > li > a,.sticky-active .main-header .header-contact a,.sticky-active .main-header .logout-link,.sticky-active .main-header .html-item,.sticky-active .main-header .sydney-login-toggle{color:;}.sticky-active .main-header .sydney-svg-icon svg,.sticky-active .main-header .dropdown-symbol .sydney-svg-icon svg{fill:;}.bottom-header-row{background-color:;}.bottom-header-row,.bottom-header-row .header-contact a,.bottom-header-row #mainnav .menu > li > a{color:;}.bottom-header-row #mainnav .menu > li > a:hover{color:;}.bottom-header-row .header-item svg,.dropdown-symbol .sydney-svg-icon svg{fill:;}.main-header .site-header-inner,.main-header .top-header-row{padding-top:15px;padding-bottom:15px;}.bottom-header-inner{padding-top:15px;padding-bottom:15px;}.bottom-header-row #mainnav ul ul li,.main-header #mainnav ul ul li{background-color:#000000;}.bottom-header-row #mainnav ul ul li a,.bottom-header-row #mainnav ul ul li:hover a,.main-header #mainnav ul ul li:hover a,.main-header #mainnav ul ul li a{color:;}.bottom-header-row #mainnav ul ul li svg,.main-header #mainnav ul ul li svg{fill:;}.header-item .sydney-svg-icon{width:px;height:px;}.header-item .sydney-svg-icon svg{max-height:-2px;}.header-search-form{background-color:;}#mainnav .sub-menu li:hover>a,.main-header #mainnav ul ul li:hover>a{color:;}.main-header-cart .count-number{color:;}.main-header-cart .widget_shopping_cart .widgettitle:after,.main-header-cart .widget_shopping_cart .woocommerce-mini-cart__buttons:before{background-color:rgba(33,33,33,0.9);}.sydney-offcanvas-menu .mainnav ul li,.mobile-header-item.offcanvas-items,.mobile-header-item.offcanvas-items .social-profile{text-align:left;}.sydney-offcanvas-menu #mainnav ul li{text-align:left;}.sydney-offcanvas-menu #mainnav ul ul a{color:;}.sydney-offcanvas-menu #mainnav > div > ul > li > a{font-size:18px;}.sydney-offcanvas-menu #mainnav ul ul li a{font-size:16px;}.sydney-offcanvas-menu .mainnav a{padding:10px 0;}#masthead-mobile{background-color:;}#masthead-mobile .site-description,#masthead-mobile a:not(.button){color:;}#masthead-mobile svg{fill:;}.mobile-header{padding-top:15px;padding-bottom:15px;}.sydney-offcanvas-menu{background-color:#00102E;}.offcanvas-header-custom-text,.sydney-offcanvas-menu,.sydney-offcanvas-menu #mainnav a:not(.button),.sydney-offcanvas-menu a:not(.button){color:#ffffff;}.sydney-offcanvas-menu svg,.sydney-offcanvas-menu .dropdown-symbol .sydney-svg-icon svg{fill:#ffffff;}@media (min-width:992px){.site-logo{max-height:100px;}}@media (min-width:576px) and (max-width:991px){.site-logo{max-height:100px;}}@media (max-width:575px){.site-logo{max-height:100px;}}.site-title a,.site-title a:visited,.main-header .site-title a,.main-header .site-title a:visited{color:}.site-description,.main-header .site-description{color:}@media (min-width:992px){.site-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.site-title{font-size:24px;}}@media (max-width:575px){.site-title{font-size:20px;}}@media (min-width:992px){.site-description{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.site-description{font-size:16px;}}@media (max-width:575px){.site-description{font-size:16px;}}h1,h2,h3,h4,h5,h6,.site-title{text-decoration:;text-transform:;font-style:;line-height:1.2;letter-spacing:px;}@media (min-width:992px){h1:not(.site-title){font-size:52px;}}@media (min-width:576px) and (max-width:991px){h1:not(.site-title){font-size:42px;}}@media (max-width:575px){h1:not(.site-title){font-size:32px;}}@media (min-width:992px){h2{font-size:42px;}}@media (min-width:576px) and (max-width:991px){h2{font-size:32px;}}@media (max-width:575px){h2{font-size:24px;}}@media (min-width:992px){h3{font-size:32px;}}@media (min-width:576px) and (max-width:991px){h3{font-size:24px;}}@media (max-width:575px){h3{font-size:20px;}}@media (min-width:992px){h4{font-size:24px;}}@media (min-width:576px) and (max-width:991px){h4{font-size:18px;}}@media (max-width:575px){h4{font-size:16px;}}@media (min-width:992px){h5{font-size:20px;}}@media (min-width:576px) and (max-width:991px){h5{font-size:16px;}}@media (max-width:575px){h5{font-size:16px;}}@media (min-width:992px){h6{font-size:18px;}}@media (min-width:576px) and (max-width:991px){h6{font-size:16px;}}@media (max-width:575px){h6{font-size:16px;}}p,.posts-layout .entry-post{text-decoration:}body,.posts-layout .entry-post{text-transform:;font-style:;line-height:1.68;letter-spacing:px;}@media (min-width:992px){body{font-size:16px;}}@media (min-width:576px) and (max-width:991px){body{font-size:16px;}}@media (max-width:575px){body{font-size:16px;}}@media (min-width:992px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (max-width:575px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (min-width:992px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}@media (min-width:576px) and (max-width:991px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}@media (max-width:575px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}.woocommerce ul.products li.product .col-md-7 > *,.woocommerce ul.products li.product .col-md-8 > *,.woocommerce ul.products li.product > *{margin-bottom:12px;}.wc-block-grid__product-onsale,span.onsale{border-radius:0;top:20px!important;left:20px!important;}.wc-block-grid__product-onsale,.products span.onsale{left:auto!important;right:20px;}.wc-block-grid__product-onsale,span.onsale{color:;}.wc-block-grid__product-onsale,span.onsale{background-color:;}ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title,ul.wc-block-grid__products li.wc-block-grid__product .woocommerce-loop-product__title,ul.wc-block-grid__products li.product .wc-block-grid__product-title,ul.wc-block-grid__products li.product .woocommerce-loop-product__title,ul.products li.wc-block-grid__product .wc-block-grid__product-title,ul.products li.wc-block-grid__product .woocommerce-loop-product__title,ul.products li.product .wc-block-grid__product-title,ul.products li.product .woocommerce-loop-product__title,ul.products li.product .woocommerce-loop-category__title,.woocommerce-loop-product__title .botiga-wc-loop-product__title{color:;}a.wc-forward:not(.checkout-button){color:;}a.wc-forward:not(.checkout-button):hover{color:;}.woocommerce-pagination li .page-numbers:hover{color:;}.woocommerce-sorting-wrapper{border-color:rgba(33,33,33,0.9);}ul.products li.product-category .woocommerce-loop-category__title{text-align:center;}ul.products li.product-category > a,ul.products li.product-category > a > img{border-radius:0;}.entry-content a:not(.button):not(.elementor-button-link):not(.wp-block-button__link){color:;}.entry-content a:not(.button):not(.elementor-button-link):not(.wp-block-button__link):hover{color:;}h1{color:;}h2{color:;}h3{color:;}h4{color:;}h5{color:;}h6{color:;}div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=date],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=email],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=number],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=password],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=search],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=tel],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=text],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=url],div.wpforms-container-full:not(.wpforms-block) .wpforms-form select,div.wpforms-container-full:not(.wpforms-block) .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="date"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="date"]:focus,textarea:focus,select:focus,.woocommerce .select2-container .select2-selection--single:focus,.woocommerce-page .select2-container .select2-selection--single:focus,.select2-container--default .select2-selection--single .select2-selection__rendered,.wp-block-search .wp-block-search__input,.wp-block-search .wp-block-search__input:focus{color:;}div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=date],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=email],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=number],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=password],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=search],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=tel],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=text],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=url],div.wpforms-container-full:not(.wpforms-block) .wpforms-form select,div.wpforms-container-full:not(.wpforms-block) .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="date"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,.woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"]{background-color:;}div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=date],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=email],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=number],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=password],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=search],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=tel],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=text],div.wpforms-container-full:not(.wpforms-block) .wpforms-form input[type=url],div.wpforms-container-full:not(.wpforms-block) .wpforms-form select,div.wpforms-container-full:not(.wpforms-block) .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,.woocommerce-account fieldset,.woocommerce-account .woocommerce-form-login,.woocommerce-account .woocommerce-form-register,.woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"],.wp-block-search .wp-block-search__input{border-color:;}input::placeholder{color:;opacity:1;}input:-ms-input-placeholder{color:;}input::-ms-input-placeholder{color:;}img{border-radius:0;}@media (min-width:992px){.wp-caption-text,figcaption{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.wp-caption-text,figcaption{font-size:16px;}}@media (max-width:575px){.wp-caption-text,figcaption{font-size:16px;}}.wp-caption-text,figcaption{color:;}
-</style>
-<script type="text/javascript" src="https://c0.wp.com/c/6.8.3/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
-<script type="text/javascript" src="https://c0.wp.com/c/6.8.3/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-<link rel="https://api.w.org/" href="https://materialsvirtuallab.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://materialsvirtuallab.org/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 6.8.3" />
-<link rel='shortlink' href='https://wp.me/7zPWj' />
-			<style>
-				.sydney-svg-icon {
-					display: inline-block;
-					width: 16px;
-					height: 16px;
-					vertical-align: middle;
-					line-height: 1;
-				}
-				.team-item .team-social li .sydney-svg-icon {
-					width: 14px;
-				}
-				.roll-team:not(.style1) .team-item .team-social li .sydney-svg-icon {
-					fill: #fff;
-				}
-				.team-item .team-social li:hover .sydney-svg-icon {
-					fill: #000;
-				}
-				.team_hover_edits .team-social li a .sydney-svg-icon {
-					fill: #000;
-				}
-				.team_hover_edits .team-social li:hover a .sydney-svg-icon {
-					fill: #fff;
-				}	
-				.single-sydney-projects .entry-thumb {
-					text-align: left;
-				}	
-
-			</style>
-			<style>img#wpstats{display:none}</style>
-		
-<!-- Jetpack Open Graph Tags -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Materials Virtual Lab" />
-<meta property="og:description" content="Advancing Materials Science through AI" />
-<meta property="og:url" content="https://materialsvirtuallab.org/" />
-<meta property="og:site_name" content="Materials Virtual Lab" />
-<meta property="og:image" content="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2013/08/cropped-mavrl.png?fit=512%2C512&#038;ssl=1" />
-<meta property="og:image:width" content="512" />
-<meta property="og:image:height" content="512" />
-<meta property="og:image:alt" content="" />
-<meta property="og:locale" content="en_US" />
-
-<!-- End Jetpack Open Graph Tags -->
-<link rel="icon" href="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2013/08/cropped-mavrl.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
-<link rel="icon" href="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2013/08/cropped-mavrl.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2013/08/cropped-mavrl.png?fit=180%2C180&#038;ssl=1" />
-<meta name="msapplication-TileImage" content="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2013/08/cropped-mavrl.png?fit=270%2C270&#038;ssl=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empa - Computational Materials Research</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            z-index: 10;
+        }
+        
+        .logo img {
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .nav-container {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+        }
+        
+        .main-nav {
+            display: flex;
+            list-style: none;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-item {
+            position: relative;
+            margin: 0 5px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 8px 12px;
+            display: block;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .nav-item a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown a {
+            padding: 10px 15px;
+            border-bottom: 1px solid #f1f1f1;
+            font-weight: 500;
+        }
+        
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+        
+        .search-container {
+            margin-left: 15px;
+        }
+        
+        .search-box {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-box input {
+            border: none;
+            padding: 8px 12px;
+            width: 200px;
+            outline: none;
+            background: transparent;
+        }
+        
+        .search-box button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-box button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Content Styles */
+        .content {
+            padding: 40px 0;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .news-item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .news-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .research-card {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .research-card i {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .research-card h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            
+            .search-container {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .main-nav {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                height: 300px;
+            }
+            
+            .logo img {
+                height: 50px;
+            }
+            
+            .nav-container {
+                top: 10px;
+                right: 15px;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                width: 200px;
+            }
+            
+            .nav-item {
+                margin: 5px 0;
+            }
+            
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                margin-top: 5px;
+            }
+            
+            .nav-item:hover .dropdown {
+                display: block;
+            }
+        }
+    </style>
 </head>
-
-<body class="home blog wp-theme-sydney menu-inline" >
-
-<span id="toptarget"></span>
-
-	<div class="preloader">
-	    <div class="spinner">
-	        <div class="pre-bounce1"></div>
-	        <div class="pre-bounce2"></div>
-	    </div>
-	</div>
-	
-
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-		
-
-					<header id="masthead" class="main-header header_layout_2 sticky-header sticky-always">
-					<div class="container">
-						<div class="site-header-inner">
-							<div class="row valign">
-								<div class="header-col">
-												<div class="site-branding">
-
-															
-					<a href="https://materialsvirtuallab.org/" title="Materials Virtual Lab"><img width="427" height="285" class="site-logo" src="https://materialsvirtuallab.org/wp-content/uploads/2018/03/MAVRL_white_small-1.png" alt="Materials Virtual Lab"  /></a>
-				
-											<h1 class="screen-reader-text">Materials Virtual Lab</h1>
-										
-			</div><!-- .site-branding -->
-											</div>
-								<div class="header-col menu-col menu-right">
-										
-			<nav id="mainnav" class="mainnav">
-				<div class="menu-default-container"><ul id="primary-menu" class="menu"><li id="menu-item-170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170 sydney-dropdown-li"><a href="http://www.materialsvirtuallab.org" class="sydney-dropdown-link">Home</a></li>
-<li id="menu-item-723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-723 sydney-dropdown-li"><a aria-haspopup="true" aria-expanded="false" href="#" class="sydney-dropdown-link">About</a><span tabindex=0 class="dropdown-symbol"><i class="sydney-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z" /></svg></i></span>
-<ul class="sub-menu sydney-dropdown-ul">
-	<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/mission-values/" class="sydney-dropdown-link">Mission &#038; Values</a></li>
-	<li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/people/" class="sydney-dropdown-link">People</a></li>
-	<li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/positions/" class="sydney-dropdown-link">Positions</a></li>
-	<li id="menu-item-691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-691 sydney-dropdown-li"><a href="https://materialsvirtuallab.notion.site/" class="sydney-dropdown-link">Guide</a></li>
-	<li id="menu-item-424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-424 sydney-dropdown-li"><a target="_blank" href="https://www.materialsvirtuallab.org/wiki" class="sydney-dropdown-link">Members wiki</a></li>
-</ul>
-</li>
-<li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/research/" class="sydney-dropdown-link">Research</a></li>
-<li id="menu-item-237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/publications/" class="sydney-dropdown-link">Publications</a></li>
-<li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/teaching/" class="sydney-dropdown-link">Teaching</a></li>
-<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-722 sydney-dropdown-li"><a aria-haspopup="true" aria-expanded="false" href="#" class="sydney-dropdown-link">Community</a><span tabindex=0 class="dropdown-symbol"><i class="sydney-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z" /></svg></i></span>
-<ul class="sub-menu sydney-dropdown-ul">
-	<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/software/" class="sydney-dropdown-link">Software</a></li>
-	<li id="menu-item-1628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1628 sydney-dropdown-li"><a href="https://matterverse.ai" class="sydney-dropdown-link">matterverse.ai</a></li>
-	<li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291 sydney-dropdown-li"><a href="http://crystalium.materialsvirtuallab.org" class="sydney-dropdown-link">Crystalium</a></li>
-	<li id="menu-item-1229" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1229 sydney-dropdown-li"><a href="https://xas.crystals.ai" class="sydney-dropdown-link">XAS-RF</a></li>
-	<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-553 sydney-dropdown-li"><a href="http://matgenb.materialsvirtuallab.org" class="sydney-dropdown-link">Matgenb</a></li>
-	<li id="menu-item-204" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-204 sydney-dropdown-li"><a href="http://matgenie.materialsvirtuallab.org" class="sydney-dropdown-link">Matgenie</a></li>
-</ul>
-</li>
-<li id="menu-item-1324" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1324 sydney-dropdown-li"><a target="_blank" href="https://www.youtube.com/c/MaterialsVirtualLab" class="sydney-dropdown-link">Youtube</a></li>
-</ul></div>			</nav>
-											</div>							
-								<div class="header-col header-elements">
-													<a href="#" class="header-search header-item" role="button">
-					<span class="screen-reader-text">Search</span>
-					<i class="sydney-svg-icon icon-search active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" /></svg></i>
-					<i class="sydney-svg-icon icon-cancel"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" /></svg></i>
-				</a>
-											</div>							
-							</div>
-						</div>
-					</div>
-								<div class="header-search-form">
-			<form role="search" method="get" class="search-form" action="https://materialsvirtuallab.org/">
-				<label>
-					<span class="screen-reader-text">Search for:</span>
-					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
-				</label>
-				<input type="submit" class="search-submit" value="Search" />
-			</form>			</div>
-							</header>
-			
-			<div class="sydney-offcanvas-menu">
-				<div class="mobile-header-item">
-					<div class="row valign">
-						<div class="col-xs-8">
-										<div class="site-branding">
-
-															
-					<a href="https://materialsvirtuallab.org/" title="Materials Virtual Lab"><img width="427" height="285" class="site-logo" src="https://materialsvirtuallab.org/wp-content/uploads/2018/03/MAVRL_white_small-1.png" alt="Materials Virtual Lab"  /></a>
-				
-										
-			</div><!-- .site-branding -->
-									</div>
-						<div class="col-xs-4 align-right">
-							<a class="mobile-menu-close" href="#"><i class="sydney-svg-icon icon-cancel"><span class="screen-reader-text">Close menu</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" /></svg></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="mobile-header-item">
-						
-			<nav id="mainnav" class="mainnav">
-				<div class="menu-default-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170 sydney-dropdown-li"><a href="http://www.materialsvirtuallab.org" class="sydney-dropdown-link">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-723 sydney-dropdown-li"><a aria-haspopup="true" aria-expanded="false" href="#" class="sydney-dropdown-link">About</a><span tabindex=0 class="dropdown-symbol"><i class="sydney-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z" /></svg></i></span>
-<ul class="sub-menu sydney-dropdown-ul">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/mission-values/" class="sydney-dropdown-link">Mission &#038; Values</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/people/" class="sydney-dropdown-link">People</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/positions/" class="sydney-dropdown-link">Positions</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-691 sydney-dropdown-li"><a href="https://materialsvirtuallab.notion.site/" class="sydney-dropdown-link">Guide</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-424 sydney-dropdown-li"><a target="_blank" href="https://www.materialsvirtuallab.org/wiki" class="sydney-dropdown-link">Members wiki</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/research/" class="sydney-dropdown-link">Research</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/publications/" class="sydney-dropdown-link">Publications</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/teaching/" class="sydney-dropdown-link">Teaching</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-722 sydney-dropdown-li"><a aria-haspopup="true" aria-expanded="false" href="#" class="sydney-dropdown-link">Community</a><span tabindex=0 class="dropdown-symbol"><i class="sydney-svg-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.011 512.011"><path d="M505.755 123.592c-8.341-8.341-21.824-8.341-30.165 0L256.005 343.176 36.421 123.592c-8.341-8.341-21.824-8.341-30.165 0s-8.341 21.824 0 30.165l234.667 234.667a21.275 21.275 0 0015.083 6.251 21.275 21.275 0 0015.083-6.251l234.667-234.667c8.34-8.341 8.34-21.824-.001-30.165z" /></svg></i></span>
-<ul class="sub-menu sydney-dropdown-ul">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203 sydney-dropdown-li"><a href="https://materialsvirtuallab.org/software/" class="sydney-dropdown-link">Software</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1628 sydney-dropdown-li"><a href="https://matterverse.ai" class="sydney-dropdown-link">matterverse.ai</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291 sydney-dropdown-li"><a href="http://crystalium.materialsvirtuallab.org" class="sydney-dropdown-link">Crystalium</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1229 sydney-dropdown-li"><a href="https://xas.crystals.ai" class="sydney-dropdown-link">XAS-RF</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-553 sydney-dropdown-li"><a href="http://matgenb.materialsvirtuallab.org" class="sydney-dropdown-link">Matgenb</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-204 sydney-dropdown-li"><a href="http://matgenie.materialsvirtuallab.org" class="sydney-dropdown-link">Matgenie</a></li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1324 sydney-dropdown-li"><a target="_blank" href="https://www.youtube.com/c/MaterialsVirtualLab" class="sydney-dropdown-link">Youtube</a></li>
-</ul></div>			</nav>
-							</div>
-				<div class="mobile-header-item offcanvas-items">
-									</div>				
-			</div>
-			
-							<header id="masthead-mobile" class="main-header mobile-header ">
-					<div class="container-fluid">
-						<div class="row valign">
-							<div class="col-sm-4 col-grow-mobile">
-											<div class="site-branding">
-
-															
-					<a href="https://materialsvirtuallab.org/" title="Materials Virtual Lab"><img width="427" height="285" class="site-logo" src="https://materialsvirtuallab.org/wp-content/uploads/2018/03/MAVRL_white_small-1.png" alt="Materials Virtual Lab"  /></a>
-				
-										
-			</div><!-- .site-branding -->
-										</div>
-							<div class="col-sm-8 col-grow-mobile header-elements valign align-right">
-												<a href="#" class="header-search header-item" role="button">
-					<span class="screen-reader-text">Search</span>
-					<i class="sydney-svg-icon icon-search active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" /></svg></i>
-					<i class="sydney-svg-icon icon-cancel"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41L12.59 0Z" /></svg></i>
-				</a>
-															
-								<a href="#" class="menu-toggle">
-					<span class="screen-reader-text">Toggle menu</span>
-					<i class="sydney-svg-icon"><svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="1" /><rect y="5" width="16" height="1" /><rect y="10" width="16" height="1" /></svg></i>
-				</a>
-										</div>						
-						</div>
-					</div>
-								<div class="header-search-form">
-			<form role="search" method="get" class="search-form" action="https://materialsvirtuallab.org/">
-				<label>
-					<span class="screen-reader-text">Search for:</span>
-					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
-				</label>
-				<input type="submit" class="search-submit" value="Search" />
-			</form>			</div>
-							</header>
-						
-	
-	<div class="sydney-hero-area">
-		
-    
-    <div id="slideshow" class="header-slider" data-speed="0" data-mobileslider="responsive">
-        <div class="slides-container">
-
-                                <div class="slide-item slide-item-1" style="background-image:url('https://materialsvirtuallab.org/wp-content/uploads/2018/08/20180206-LED_phosphors-2761-export-8MP.jpg');">
-                    <img class="mobile-slide preserve" src="https://materialsvirtuallab.org/wp-content/uploads/2018/08/20180206-LED_phosphors-2761-export-8MP.jpg" alt=""/>
-                    <div class="slide-inner">
-                        <div class="contain animated fadeInRightBig text-slider">
-                        <h2 class="maintitle">Materials Virtual Lab</h2>
-                        <p class="subtitle">Creating It from Bit</p>
-                        </div>
-                        <a href="#content" class="roll-button button-slider">Read Latest News</a>                    </div>
-                </div>
-                
-        </div>  
-                        
-    <div class="slide-inner text-slider-stopped">
-        <div class="contain text-slider">
-            <h2 class="maintitle">Materials Virtual Lab</h2>
-            <p class="subtitle">Creating It from Bit</p>
+<body>
+    <header>
+        <div class="header-image">
+            <div class="header-overlay"></div>
         </div>
-        <a href="#content" class="roll-button button-slider">Read Latest News</a>    </div>   
+        <div class="logo">
+            <img src="https://via.placeholder.com/150x60?text=Empa+Logo" alt="Empa Computational Materials Research Group Logo">
+        </div>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item">
+                    <a href="#">About</a>
+                    <div class="dropdown">
+                        <a href="https://materialsvirtuallab.org/mission-values/" target="_blank">Mission & Values</a>
+                        <a href="https://materialsvirtuallab.org/people/" target="_blank">People</a>
+                        <a href="https://materialsvirtuallab.org/positions/" target="_blank">Positions</a>
+                        <a href="https://materialsvirtuallab.notion.site/" target="_blank">Guide</a>
+                        <a href="https://www.materialsvirtuallab.org/wiki" target="_blank">Members wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="https://materialsvirtuallab.org/research/" target="_blank">Research</a></li>
+                <li class="nav-item"><a href="https://materialsvirtuallab.org/publications/" target="_blank">Publications</a></li>
+                <li class="nav-item"><a href="https://materialsvirtuallab.org/teaching/" target="_blank">Teaching</a></li>
+                <li class="nav-item">
+                    <a href="#">Community</a>
+                    <div class="dropdown">
+                        <a href="https://materialsvirtuallab.org/software/" target="_blank">Software</a>
+                        <a href="https://matterverse.ai" target="_blank">matterverse.ai</a>
+                        <a href="http://crystalium.materialsvirtuallab.org" target="_blank">Crystalium</a>
+                        <a href="https://xas.crystals.ai" target="_blank">XAS-RF</a>
+                        <a href="http://matgenb.materialsvirtuallab.org" target="_blank">Matgenb</a>
+                        <a href="http://matgenie.materialsvirtuallab.org" target="_blank">Matgenie</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="https://www.youtube.com/c/MaterialsVirtualLab" target="_blank">Youtube</a></li>
+            </ul>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
                 </div>
-
+            </div>
+        </div>
+    </header>
     
-    		<div class="header-image">
-			<div class="overlay"></div>					</div>
-		
-			</div>
+    <div class="container content">
+        <section class="section">
+            <h2>Welcome to Computational Materials Research</h2>
+            <p>At Empa's Computational Materials Research Group, we leverage advanced computational methods to design and discover novel materials with tailored properties for energy, electronics, and sustainability applications.</p>
+            
+            <div class="highlight-box">
+                <p>Our research combines first-principles calculations, machine learning, and multiscale modeling to accelerate materials discovery and understand materials behavior at the atomic level.</p>
+            </div>
+            
+            <p>We collaborate closely with experimental groups to validate predictions and develop new computational tools that push the boundaries of materials science.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Research Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <i class="fas fa-atom"></i>
+                    <h3>First-Principles Calculations</h3>
+                    <p>Quantum mechanical simulations for material properties</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>AI-driven materials discovery and property prediction</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>Energy Materials</h3>
+                    <p>Design of next-generation battery and fuel cell materials</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>2D Materials</h3>
+                    <p>Exploring novel properties of atomically thin materials</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Latest Research Highlights</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <h3>New Machine Learning Framework for Materials Discovery</h3>
+                    <div class="news-date">June 15, 2023</div>
+                    <p>Our team has developed a novel machine learning approach that significantly accelerates the discovery of high-performance battery materials.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Advanced Catalyst Design for CO2 Reduction</h3>
+                    <div class="news-date">May 28, 2023</div>
+                    <p>We've identified promising catalyst materials for efficient electrochemical CO2 conversion using high-throughput computational screening.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Open-Source Software Release</h3>
+                    <div class="news-date">April 12, 2023</div>
+                    <p>Our new computational tool for predicting materials interfaces is now available as open-source software for the research community.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Upcoming Events</h2>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>July 10, 2023:</strong> International Conference on Computational Materials Science - Keynote by Dr. Anna Müller</li>
+                <li><strong>August 5, 2023:</strong> Workshop on Machine Learning in Materials Science</li>
+                <li><strong>September 15, 2023:</strong> Empa Open Day - Visit our labs and computational facilities</li>
+                <li><strong>October 20, 2023:</strong> Materials Genome Initiative Symposium</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Empa - Swiss Federal Laboratories for Materials Science and Technology</p>
+                    <p>Überlandstrasse 129</p>
+                    <p>8600 Dübendorf, Switzerland</p>
+                    <p>Email: cmr@empa.ch</p>
+                    <p>Phone: +41 58 765 4321</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://materialsvirtuallab.org/research/" target="_blank">Research</a></li>
+                        <li><a href="https://materialsvirtuallab.org/publications/" target="_blank">Publications</a></li>
+                        <li><a href="https://materialsvirtuallab.org/software/" target="_blank">Software</a></li>
+                        <li><a href="https://materialsvirtuallab.org/positions/" target="_blank">Open Positions</a></li>
+                        <li><a href="https://www.youtube.com/c/MaterialsVirtualLab" target="_blank">Youtube Channel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Collaborations</h3>
+                    <ul>
+                        <li><a href="#">ETH Zurich</a></li>
+                        <li><a href="#">EPFL</a></li>
+                        <li><a href="#">PSI</a></li>
+                        <li><a href="#">European Projects</a></li>
+                        <li><a href="#">Industry Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Empa - Computational Materials Research Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-	
-	<div id="content" class="page-wrap">
-		<div class="content-wrapper container">
-			<div class="row">	
-	
-		<div id="primary" class="content-area sidebar-right layout2 col-md-9">
-		<main id="main" class="post-wrap" role="main">
+    <script>
+        // 搜索功能
+        document.querySelector('.search-box button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-box input').value;
+            if (searchTerm.trim() !== '') {
+                alert(`Searching for: ${searchTerm}`);
+                // 在实际应用中，这里可以添加实际的搜索逻辑
+            }
+        });
 
-		
-			
-			<div class="posts-layout">
-				<div class="row" >
-					
-						
-<article id="post-2131" class="post-2131 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2025/09/unlocking-superionic-sodium-transport-and-synthesis-with-mlips/" rel="bookmark"><time class="entry-date published updated" datetime="2025-09-16T09:58:30-07:00" >September 16, 2025</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2025/09/unlocking-superionic-sodium-transport-and-synthesis-with-mlips/" rel="bookmark">Unlocking Superionic Sodium Transport and Synthesis with MLIPs</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2025/09/unlocking-superionic-sodium-transport-and-synthesis-with-mlips/" title="Unlocking Superionic Sodium Transport and Synthesis with MLIPs"><img width="2508" height="938" src="https://materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47@2x.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?w=2508&amp;ssl=1 2508w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=300%2C112&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=1024%2C383&amp;ssl=1 1024w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=768%2C287&amp;ssl=1 768w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=1536%2C574&amp;ssl=1 1536w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=2048%2C766&amp;ssl=1 2048w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=1000%2C374&amp;ssl=1 1000w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=230%2C86&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=350%2C131&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?resize=480%2C180&amp;ssl=1 480w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?w=2340&amp;ssl=1 2340w" sizes="(max-width: 2508px) 100vw, 2508px" data-attachment-id="2132" data-permalink="https://materialsvirtuallab.org/2025/09/unlocking-superionic-sodium-transport-and-synthesis-with-mlips/cleanshot-2025-09-16-at-09-57-472x/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?fit=2508%2C938&amp;ssl=1" data-orig-size="2508,938" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="CleanShot 2025-09-16 at 09.57.47@2x" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?fit=300%2C112&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/09/CleanShot-2025-09-16-at-09.57.47%402x.png?fit=1024%2C383&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<div>All-solid-state sodium batteries are attractive for grid-scale storage, but the search for a solid electrolyte that combines high ionic conductivity, mechanical compliance, and electrochemical stability has been challenging. In this collaboration with the Meng group published in Joule, we demonstrate that a metastable orthorhombic sodium closo-hydridoborate, Na₃(B₁₂H₁₂)(BH₄) (o-NBH) achieves 4.6 mS cm⁻¹ room-temperature conductivity and enables thick-cathode Na-ASSBs with &gt;3 mAh cm⁻² areal capacity.</div>
-<div></div>
-<div>Our group&#8217;s main contribution to this work is in the application of state-of-the-art machine learning interatomic potentials (MLIPs) in guiding synthesis and probing ion transport. MAVRL member, Zihan Yu, used using high-throughput r2SCAN density-functional theory (DFT) calculations to create a dataset and fine-tune a M3GNet foundation potential for the Na-B-H system. This MLIP allowed the generation of finite-temperature phase diagrams with phonon-derived vibrational entropies. These calculations revealed taht o-NBH sits ~16 meV atom⁻¹ above the 0 K hull but is entropically stabilized above ~650 K, in agreement with experiments.</div>
-<div></div>
-<div>MD simulations with the fine-tuned M3GNet potential shows that o-NBH exhibits 3D Na⁺ diffusion pathways with activation energies of 0.13 eV (short-range) and 0.23 eV (long-range), consistent with NMR relaxation experiments. One major innovation is the use of artificial anion masses to probe the effect of anion rotation on ionic conductivity. Unlike most computational studies that rigidly freeze atoms, our approach provides a more calibrated approach to modify anion rotation dynamics. We find that increased B₁₂H₁₂ or BH₄ cluster masses suppressed Na⁺ conductivity without significantly raising the activation barrier. This suggests that anion rotations boost the population of mobile Na⁺ rather than lowering the hopping barrier.</div>
-<p>Check out the work <a href="https://materialsvirtuallab.org/pubs/10.1016_j.joule.2025.102130.pdf">here</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
+        // 按回车键搜索
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.search-box button').click();
+            }
+        });
 
-					
-						
-<article id="post-2124" class="post-2124 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2025/08/unlocking-ultrafast-li-ion-highways-on-carbon-surfaces/" rel="bookmark"><time class="entry-date published updated" datetime="2025-08-16T09:30:32-07:00" >August 16, 2025</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2025/08/unlocking-ultrafast-li-ion-highways-on-carbon-surfaces/" rel="bookmark">Unlocking Ultrafast Li-Ion Highways on Carbon Surfaces</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2025/08/unlocking-ultrafast-li-ion-highways-on-carbon-surfaces/" title="Unlocking Ultrafast Li-Ion Highways on Carbon Surfaces"><img width="820" height="543" src="https://materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56@2x.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?w=820&amp;ssl=1 820w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?resize=300%2C199&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?resize=768%2C509&amp;ssl=1 768w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?resize=230%2C152&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?resize=350%2C232&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?resize=480%2C318&amp;ssl=1 480w" sizes="(max-width: 820px) 100vw, 820px" data-attachment-id="2125" data-permalink="https://materialsvirtuallab.org/2025/08/unlocking-ultrafast-li-ion-highways-on-carbon-surfaces/cleanshot-2025-08-16-at-09-28-562x/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?fit=820%2C543&amp;ssl=1" data-orig-size="820,543" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="CleanShot 2025-08-16 at 09.28.56@2x" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?fit=300%2C199&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/CleanShot-2025-08-16-at-09.28.56%402x.png?fit=820%2C543&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<div>For decades, researchers have relied on carbonaceous materials like graphite and carbon black as workhorse components in lithium-ion batteries (LIBs). These carbons usually function as hosts for lithium intercalation, where Li ions slip between graphene layers. But there’s always been a catch: lithium diffusion through bulk carbon is relatively slow, limiting performance and requiring the help of liquid or solid electrolytes. In this work, we collaborated with the group of Prof Ping Liu and researchers at the University of Maryland, and the University of Houston to identify a completely new superionic lithium transport pathway along the surface of carbon materials. We found that in carbon blacks with high surface area but limited lithium storage capacity, such as Ketjen black (KB), lithium ions move astonishingly fast across the surface once lithiated. At room temperature, lithiated KB exhibited an ionic conductivity of 18.1 mS/cm, outperforming many leading solid electrolytes. Our group&#8217;s contributions (led by Ji Qi) is in the form of DFT calculations to show that lithium at the surface encounters much lower migration barriers (as low as 0.15 eV) than lithium inside bulk graphite. In effect, the carbon surface becomes a highway for ultrafast lithium transport.</div>
-<div></div>
-<div>This surface-mediated conduction has several implications:</div>
-<div>&#8211; Lithiated carbon blacks can act as protective interlayers between lithium metal and solid electrolytes, suppressing dangerous dendrite growth.</div>
-<div>&#8211; Mixed ionic–electronic conductors like KB serve as both electron and ion conductors, enabling more stable, high-performance anodes.</div>
-<div>&#8211; Full-cell batteries with carbon black interlayers retained ~85% capacity over 300 cycles, compared to rapid short-circuiting without them.</div>
-<div></div>
-<div>The findings point to a new design principle for solid-state ion conductors: look for materials with high surface area, thermodynamic stability, and weak ion–surface interactions. With these criteria, carbon blacks aren’t just inert additives anymore—they’re active enablers of next-generation solid-state batteries.</p>
-<p class="p1">Read the full paper here: <a href="https://doi.org/10.1021/acs.nanolett.5c02729">ACS Nano Letters – Superionic Surface Li-Ion Transport in Carbonaceous Materials</a></p>
-</div>
-			</div>
-				</div>
-</article><!-- #post-## -->
+        // 响应式导航菜单
+        function adjustNavForMobile() {
+            const nav = document.querySelector('.main-nav');
+            const searchBox = document.querySelector('.search-box');
+            
+            if (window.innerWidth <= 768) {
+                if (!nav.classList.contains('mobile-nav')) {
+                    nav.classList.add('mobile-nav');
+                    // 在移动设备上，将搜索框移到导航下方
+                    document.querySelector('.nav-container').insertBefore(searchBox.parentNode, nav.nextSibling);
+                }
+            } else {
+                if (nav.classList.contains('mobile-nav')) {
+                    nav.classList.remove('mobile-nav');
+                    // 在桌面设备上，将搜索框移回原位
+                    document.querySelector('.nav-container').insertBefore(searchBox.parentNode, nav.nextSibling);
+                }
+            }
+        }
 
-					
-						
-<article id="post-2114" class="post-2114 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2025/08/matgl/" rel="bookmark"><time class="entry-date published updated" datetime="2025-08-05T08:03:42-07:00" >August 5, 2025</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2025/08/matgl/" rel="bookmark">MatGL</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2025/08/matgl/" title="MatGL"><img width="858" height="783" src="https://materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?w=858&amp;ssl=1 858w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?resize=300%2C274&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?resize=768%2C701&amp;ssl=1 768w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?resize=230%2C210&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?resize=350%2C319&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?resize=480%2C438&amp;ssl=1 480w" sizes="(max-width: 858px) 100vw, 858px" data-attachment-id="2115" data-permalink="https://materialsvirtuallab.org/2025/08/matgl/matgl/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?fit=858%2C783&amp;ssl=1" data-orig-size="858,783" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MatGL" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?fit=300%2C274&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/08/MatGL.png?fit=858%2C783&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>Graph deep learning is transforming materials science by enabling accurate, scalable, and efficient predictions of material properties and potential energy surfaces (PES). Our article on &#8220;Materials Graph Library (MatGL) — an open-source, modular framework purpose-built for materials science and chemistry&#8221; has been published in npj Computational Materials. MatGL started as a collaboration between Intel Labs and the Materials Virtual Lab to provide a “batteries-included” environment for:</p>
-<ul>
-<li>Implementing both invariant and equivariant graph neural networks (GNNs), including M3GNet, MEGNet, CHGNet, TensorNet, and SO3Net.</li>
-<li>Leveraging pretrained foundation potentials (FPs) covering the full periodic table for out-of-the-box property predictions and atomistic simulations.</li>
-<li>Seamless integration with ASE and LAMMPS for high-fidelity molecular dynamics, geometry optimization, and property calculations.</li>
-<li>Training custom models with PyTorch Lightning for efficient parallelization on CPUs, GPUs, and TPUs.</li>
-</ul>
-<p>We show that MatGL’s models achieving state-of-the-art accuracy on widely used datasets (QM9, Matbench, ANI-1x, MPF, MatPES) while maintaining competitive computational efficiency. The library’s design also supports fine-tuning, enabling rapid adaptation to new materials systems.</p>
-<p>Read the full paper <a href="https://materialsvirtuallab.org/pubs/10.1038_s41524-025-01742-y.pdf">here</a> and explore <a href="https://github.com/materialsvirtuallab/matgl">MatGL on GitHub</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-2083" class="post-2083 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2025/03/high-fidelity-machine-learning-interatomic-potentials-with-multi-fidelity-training/" rel="bookmark"><time class="entry-date published updated" datetime="2025-03-08T07:37:30-08:00" >March 8, 2025</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2025/03/high-fidelity-machine-learning-interatomic-potentials-with-multi-fidelity-training/" rel="bookmark">High-Fidelity Machine Learning Interatomic Potentials with Multi-Fidelity Training</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2025/03/high-fidelity-machine-learning-interatomic-potentials-with-multi-fidelity-training/" title="High-Fidelity Machine Learning Interatomic Potentials with Multi-Fidelity Training"><img width="2560" height="1549" src="https://materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?w=2560&amp;ssl=1 2560w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=300%2C182&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=1024%2C620&amp;ssl=1 1024w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=768%2C465&amp;ssl=1 768w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=1536%2C929&amp;ssl=1 1536w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=2048%2C1239&amp;ssl=1 2048w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=1000%2C605&amp;ssl=1 1000w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=230%2C139&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=350%2C212&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?resize=480%2C290&amp;ssl=1 480w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?w=2340&amp;ssl=1 2340w" sizes="auto, (max-width: 2560px) 100vw, 2560px" data-attachment-id="2084" data-permalink="https://materialsvirtuallab.org/2025/03/high-fidelity-machine-learning-interatomic-potentials-with-multi-fidelity-training/mfi-m3gnet/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?fit=2560%2C1549&amp;ssl=1" data-orig-size="2560,1549" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="mfi-m3gnet" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?fit=300%2C182&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/03/mfi-m3gnet-scaled.jpg?fit=1024%2C620&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>Machine learning interatomic potentials (MLIPs) are powerful tools for atomistic simulations, but training them with high-fidelity quantum mechanical data is costly. Most MLIPs rely on low-cost PBE calculations, while more accurate SCAN functionals are computationally expensive.</p>
-<p>In this work, Tsz Wai Ko introduces a multi-fidelity M3GNet approach that can achieve SCAN-level accuracy with 10% SCAN data, reducing computational costs significantly.</p>
-<p>Key Findings</p>
-<p> Silicon: Captures phase transitions &#038; structural properties with high accuracy.<br />
- Water: Predicts liquid &#038; ice structures better than single-fidelity models.<br />
- Efficiency: Cuts high-fidelity data requirements by up to 90% while improving accuracy.</p>
-<p>Why It Matters</p>
-<p>✔️ Faster, cheaper MLPs for materials simulations.<br />
-✔️ Better generalization to unseen materials.<br />
-✔️ A pathway to universal, high-fidelity interatomic potentials.</p>
-<p>Read the full paper <a href="http://b" target="_blank">here</a>. </p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-2074" class="post-2074 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2025/01/enhancing-energy-density-of-li3v2o5-anode/" rel="bookmark"><time class="entry-date published updated" datetime="2025-01-27T09:17:58-08:00" >January 27, 2025</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2025/01/enhancing-energy-density-of-li3v2o5-anode/" rel="bookmark">Enhancing Energy Density of Li3V2O5 anode</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2025/01/enhancing-energy-density-of-li3v2o5-anode/" title="Enhancing Energy Density of Li3V2O5 anode"><img width="964" height="543" src="https://materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?w=964&amp;ssl=1 964w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?resize=768%2C433&amp;ssl=1 768w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?resize=230%2C130&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?resize=350%2C197&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?resize=480%2C270&amp;ssl=1 480w" sizes="auto, (max-width: 964px) 100vw, 964px" data-attachment-id="2075" data-permalink="https://materialsvirtuallab.org/2025/01/enhancing-energy-density-of-li3v2o5-anode/images_large_tz4c02086_0005/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?fit=964%2C543&amp;ssl=1" data-orig-size="964,543" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="images_large_tz4c02086_0005" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?fit=300%2C169&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2025/01/images_large_tz4c02086_0005.jpeg?fit=964%2C543&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>In 2020, Prof Ping Liu&#8217;s group and our group proposed a highly promising anode material &#8211; disordered rock salt (DRS) Li3V2O5 (LVO) &#8211; which had a near-ideal voltage of 0.6V vs Li/Li+ and fast Li diffusion. In this work, we show that we can further increase the energy density of this anode by Mg doping. Due to the increase in site energy due to Mg doping, the voltage of the LVO anode is reduced by a further 10%, while still retaining low Li migration barriers. Mg-doped LVO retains over 95% of its capacity over 1000 cycles at a rate of 5 C. Full cells with a LiNi0.8Co0.1Mn0.1O2 cathode demonstrate the expected increase in cell voltage and energy density while retaining 91% of their capacity over 250 cycles at 5 C. </p>
-<p>Check out the work <a href="https://materialsvirtuallab.org/pubs/10.1021_acsmaterialslett.4c02086.pdf" target="_blank">here</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-2059" class="post-2059 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2024/11/proton-exchange-induced-reactivity-in-ncm-cathodes/" rel="bookmark"><time class="entry-date published" datetime="2024-11-18T05:55:41-08:00">November 18, 2024</time><time class="updated" datetime="2024-11-18T05:56:35-08:00" >November 18, 2024</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2024/11/proton-exchange-induced-reactivity-in-ncm-cathodes/" rel="bookmark">Proton-exchange induced reactivity in NCM cathodes</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2024/11/proton-exchange-induced-reactivity-in-ncm-cathodes/" title="Proton-exchange induced reactivity in NCM cathodes"><img width="522" height="494" src="https://materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?w=522&amp;ssl=1 522w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?resize=300%2C284&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?resize=230%2C218&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?resize=350%2C331&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?resize=480%2C454&amp;ssl=1 480w" sizes="auto, (max-width: 522px) 100vw, 522px" data-attachment-id="2060" data-permalink="https://materialsvirtuallab.org/2024/11/proton-exchange-induced-reactivity-in-ncm-cathodes/protonationncm/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?fit=522%2C494&amp;ssl=1" data-orig-size="522,494" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ProtonationNCM" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?fit=300%2C284&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/11/ProtonationNCM.png?fit=522%2C494&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>Xingyu’s collaborative research with the Chen group, titled “Proton-Exchange Induced Reactivity in Layered Oxides for Lithium-Ion Batteries,” has been published in Nature Communications!</p>
-<p>This study addresses a critical challenge in the manufacturing, storage, transportation, processing, and recycling of LiNixCoyMn1-x-yO2 (NCM, 0 &lt; x, y &lt; 1), the dominant cathode material for state-of-the-art lithium-ion batteries. Through an integration of experimental and computational approaches, the team reveals how protons intercalate into the layered NCM structure, triggering Li⁺ leaching and the formation of protonated NCM. This protonation process significantly disrupts the structural integrity of the material, promoting cation rearrangement and the development of impurity phases. These effects are particularly severe in NCMs with higher nickel content.</p>
-<p>The study also demonstrates a solution-based approach to mitigate Li deficiencies in NCM materials by leveraging controlled proton concentrations and the presence of Li⁺ ions. The underlying relithiation mechanism is further elucidated through detailed materials characterization and kinetics modeling. This work provides essential insights into managing structural and compositional defects in NCM cathodes, paving the way for improved performance and stability in next-generation lithium-ion batteries.</p>
-<p>Check out this work <a href="https://materialsvirtuallab.org/pubs/10.1038_s41467-024-53731-2.pdf" target="_blank" rel="noopener">here</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-2014" class="post-2014 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2024/05/cation-ordering-in-p2-na-ion-cathodes/" rel="bookmark"><time class="entry-date published" datetime="2024-05-02T07:33:24-07:00">May 2, 2024</time><time class="updated" datetime="2024-05-02T07:38:18-07:00" >May 2, 2024</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2024/05/cation-ordering-in-p2-na-ion-cathodes/" rel="bookmark">Cation Ordering in P2 Na-Ion Cathodes</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2024/05/cation-ordering-in-p2-na-ion-cathodes/" title="Cation Ordering in P2 Na-Ion Cathodes"><img width="900" height="558" src="https://materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?w=900&amp;ssl=1 900w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?resize=300%2C186&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?resize=768%2C476&amp;ssl=1 768w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?resize=230%2C143&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?resize=350%2C217&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?resize=480%2C298&amp;ssl=1 480w" sizes="auto, (max-width: 900px) 100vw, 900px" data-attachment-id="2015" data-permalink="https://materialsvirtuallab.org/2024/05/cation-ordering-in-p2-na-ion-cathodes/images_large_ja4c00869_0008/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?fit=900%2C558&amp;ssl=1" data-orig-size="900,558" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="images_large_ja4c00869_0008" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?fit=300%2C186&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/05/images_large_ja4c00869_0008.jpeg?fit=900%2C558&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>Congratulations to Zishen for his co-authored paper on &#8220;Influence of Interlayer Cation Ordering on Na Transport in P2-Type Na0.67–xLiy Ni0.33–zMn0.67+zO2 for Sodium-Ion Batteries&#8221; published in JACS together with the group of Prof Claire Xiong at Boise State University! In this work, we studied the P2-type Na2/3Ni1/3Mn2/3O2 (PNNMO) cathode for Na-ion batteries. Zishen&#8217;s contribution is showing via DFT calculations that Li doping (Na2/3Li0.05Ni1/3Mn2/3O2, LFN5) promotes ABC-type interplanar Ni/ Mn ordering without disrupting the Na+/vacancy ordering and creates low-energy Li−Mn-coordinated diffusion pathways. These result are in line with those from neutron/X-ray diffraction. Quasielastic neutron scattering reveals that the Na+ diffusivity in LFN5 is enhanced by an order of magnitude over PNNMO, increasing its capacity at a high current. These results suggest that the interlayer ordering can be tuned through the control of composition, which has an equal or greater impact on Na+ diffusion than the Na+/vacancy ordering.</p>
-<p>Check out the work <a href="https://materialsvirtuallab.org/pubs/10.1021_jacs.4c00869.pdf" target="_blank" rel="noopener">here</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-2011" class="post-2011 post type-post status-publish format-video hentry category-publications post_format-post-format-video post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2024/04/congrats-to-ji-qi-on-the-successful-defense-of-his-thesis/" rel="bookmark"><time class="entry-date published" datetime="2024-04-18T08:07:45-07:00">April 18, 2024</time><time class="updated" datetime="2024-04-18T08:13:43-07:00" >April 18, 2024</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2024/04/congrats-to-ji-qi-on-the-successful-defense-of-his-thesis/" rel="bookmark">Congrats to Ji Qi on the successful defense of his thesis!</a></h2>			</header><!-- .entry-header -->
-						<div class="entry-post" >
-				<p>Congratulations to Ji Qi for successfully defending his PhD thesis on Apr 12 2024. During his time in the Materials Virtual Lab, Ji has made extremely valuable contributions in the development and application of machine learning interatomic potentials (MLPs). He has applied MLPs to solid electrolytes, pushing the envelope of their application to extremely complex chemistries (7 element oxides!!!). He also developed an innovative DIRECT sampling method that enables the fitting of MLPs with much fewer / zero active learning steps. We wish him all the best in his new job at CATL.</p>
-<p>Check out the recording of his PhD thesis defense below.</p>
-<p><iframe loading="lazy" title="Insights into Solid Electrolytes from Long-time and Large-size Scale Simulations with MLIPs" width="1170" height="658" src="https://www.youtube.com/embed/a_FffAQrI2c?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-1994" class="post-1994 post type-post status-publish format-standard has-post-thumbnail hentry category-publications post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2024/03/healable-sulfur-cathode-for-solid-state-li-s-batteries/" rel="bookmark"><time class="entry-date published updated" datetime="2024-03-06T10:00:42-08:00" >March 6, 2024</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2024/03/healable-sulfur-cathode-for-solid-state-li-s-batteries/" rel="bookmark">Healable Sulfur Cathode for Solid-State Li-S Batteries</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2024/03/healable-sulfur-cathode-for-solid-state-li-s-batteries/" title="Healable Sulfur Cathode for Solid-State Li-S Batteries"><img width="608" height="448" src="https://materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33@2x.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="Repaired Sulfur Cathode Interface" decoding="async" loading="lazy" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?w=608&amp;ssl=1 608w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?resize=300%2C221&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?resize=230%2C169&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?resize=350%2C258&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?resize=480%2C354&amp;ssl=1 480w" sizes="auto, (max-width: 608px) 100vw, 608px" data-attachment-id="1995" data-permalink="https://materialsvirtuallab.org/2024/03/healable-sulfur-cathode-for-solid-state-li-s-batteries/cleanshot-2024-03-06-at-09-58-332x/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?fit=608%2C448&amp;ssl=1" data-orig-size="608,448" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="CleanShot 2024-03-06 at 09.58.33@2x" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?fit=300%2C221&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/03/CleanShot-2024-03-06-at-09.58.33%402x.png?fit=608%2C448&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>Manas&#8217; final work on &#8220;Healable and conductive sulfur iodide for solid-state Li–S batteries&#8221; is now out in Nature! This work is a collaboration between Prof Ping Liu&#8217;s group and our group. Solid-state Li–S batteries (SSLSBs) are made of low-cost and abundant materials free of supply chain concerns. In this work, we report an S9.3I molecular crystal, which shows a semiconductor-level electrical conductivity. Our group&#8217;s main contribution is showing that iodine disrupts the molecular bonding in sulfur to lower its melting point, as well as introduce new states into the band gap of sulfur. This lowered melting point enables periodical remelting of the cathode to repair interfaces. </p>
-<p>Check out this work <a href="https://materialsvirtuallab.org/pubs/10.1038_s41586-024-07101-z.pdf" rel="noopener" target="_blank">here</a> as well as the <a href="https://today.ucsd.edu/story/healable-cathode-could-unlock-potential-of-solid-state-lithium-sulfur-batteries" rel="noopener" target="_blank">UCSD press release on this discovery</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-					
-						
-<article id="post-1985" class="post-1985 post type-post status-publish format-standard has-post-thumbnail hentry category-publications tag-interatomic-potentials tag-ml tag-mlps tag-sampling post-align-left post-vertical-align-middle col-md-12">
-	<div class="content-inner">
-		<div class="entry-meta above-title delimiter-dot"><span class="posted-on"><a href="https://materialsvirtuallab.org/2024/02/direct-sampling-for-robust-mlps/" rel="bookmark"><time class="entry-date published" datetime="2024-02-26T08:16:47-08:00">February 26, 2024</time><time class="updated" datetime="2024-02-26T08:19:15-08:00" >February 26, 2024</time></a></span><span class="cat-links"><a href="https://materialsvirtuallab.org/category/publications/" rel="category tag">Publications</a></span></div>			<header class="entry-header">
-				<h2 class="title-post entry-title" ><a href="https://materialsvirtuallab.org/2024/02/direct-sampling-for-robust-mlps/" rel="bookmark">DIRECT Sampling for Robust MLPs</a></h2>			</header><!-- .entry-header -->
-							<div class="entry-thumb">
-					<a href="https://materialsvirtuallab.org/2024/02/direct-sampling-for-robust-mlps/" title="DIRECT Sampling for Robust MLPs"><img width="540" height="534" src="https://materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52@2x.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?w=540&amp;ssl=1 540w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?resize=300%2C297&amp;ssl=1 300w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?resize=230%2C227&amp;ssl=1 230w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?resize=350%2C346&amp;ssl=1 350w, https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?resize=480%2C475&amp;ssl=1 480w" sizes="auto, (max-width: 540px) 100vw, 540px" data-attachment-id="1986" data-permalink="https://materialsvirtuallab.org/2024/02/direct-sampling-for-robust-mlps/cleanshot-2024-02-26-at-08-15-522x/" data-orig-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?fit=540%2C534&amp;ssl=1" data-orig-size="540,534" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="CleanShot 2024-02-26 at 08.15.52@2x" data-image-description="" data-image-caption="" data-medium-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?fit=300%2C297&amp;ssl=1" data-large-file="https://i0.wp.com/materialsvirtuallab.org/wp-content/uploads/2024/02/CleanShot-2024-02-26-at-08.15.52%402x.png?fit=540%2C534&amp;ssl=1" /></a>
-				</div>
-						<div class="entry-post" >
-				<p>Ji&#8217;s work on &#8220;Robust training of machine learning interatomic potentials with dimensionality reduction and stratified sampling&#8221; is now out in npj Computational Materials! Machine learning interatomic potentials (MLIPs) enable accurate simulations of materials at scales beyond that accessible by ab initio methods. In this work, we present DImensionality-Reduced Encoded Clusters with sTratified (DIRECT) sampling as an approach to select a robust training set of structures from a large and complex configuration space. By applying DIRECT sampling on the Materials Project relaxation trajectories dataset with over one million structures and 89 elements, we develop an improved materials 3-body graph network (M3GNet) universal potential that extrapolates more reliably to unseen structures. We further show that molecular dynamics (MD) simulations with the M3GNet universal potential can be used instead of expensive ab initio MD to rapidly create a large configuration space for target systems. We combined this scheme with DIRECT sampling to develop a reliable moment tensor potential for titanium hydrides without the need for iterative augmentation of training structures.</p>
-<p>Check out this work<a href="https://materialsvirtuallab.org/pubs/10.1038_s41524-024-01227-4.pdf" target="_blank" rel="noopener"> here</a>. If you want to use DIRECT sampling for your work, please check out our implementation available on our <a href="https://github.com/materialsvirtuallab/maml/tree/master/maml/sampling" target="_blank" rel="noopener">MAML repository on Github</a>.</p>
-			</div>
-				</div>
-</article><!-- #post-## -->
-
-									</div>
-			</div>
-			
-			
-	<nav class="navigation pagination" aria-label="Posts pagination">
-		<h2 class="screen-reader-text">Posts pagination</h2>
-		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
-<a class="page-numbers" href="https://materialsvirtuallab.org/page/2/">2</a>
-<span class="page-numbers dots">&hellip;</span>
-<a class="page-numbers" href="https://materialsvirtuallab.org/page/16/">16</a>
-<a class="next page-numbers" href="https://materialsvirtuallab.org/page/2/">&gt;</a></div>
-	</nav>	
-
-		
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	
-	
-
-<div id="secondary" class="widget-area col-md-3" role="complementary" >
-	<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://materialsvirtuallab.org/">
-				<label>
-					<span class="screen-reader-text">Search for:</span>
-					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
-				</label>
-				<input type="submit" class="search-submit" value="Search" />
-			</form></aside><aside id="wpcom_social_media_icons_widget-3" class="widget widget_wpcom_social_media_icons_widget"><h3 class="widget-title">Follow us</h3><ul><li><a href="https://www.facebook.com/materialsvirtuallab/" class="genericon genericon-facebook" target="_blank"><span class="screen-reader-text">View materialsvirtuallab&#8217;s profile on Facebook</span></a></li><li><a href="https://twitter.com/materialsvrlab/" class="genericon genericon-twitter" target="_blank"><span class="screen-reader-text">View materialsvrlab&#8217;s profile on Twitter</span></a></li><li><a href="https://github.com/materialsvirtuallab/" class="genericon genericon-github" target="_blank"><span class="screen-reader-text">View materialsvirtuallab&#8217;s profile on GitHub</span></a></li><li><a href="https://www.youtube.com/channel/UCURiu_e3VrF61KEOFpaYiHA/" class="genericon genericon-youtube" target="_blank"><span class="screen-reader-text">View UCURiu_e3VrF61KEOFpaYiHA&#8217;s profile on YouTube</span></a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>
-			<ul>
-					<li><a href='https://materialsvirtuallab.org/2025/09/'>September 2025</a></li>
-	<li><a href='https://materialsvirtuallab.org/2025/08/'>August 2025</a></li>
-	<li><a href='https://materialsvirtuallab.org/2025/03/'>March 2025</a></li>
-	<li><a href='https://materialsvirtuallab.org/2025/01/'>January 2025</a></li>
-	<li><a href='https://materialsvirtuallab.org/2024/11/'>November 2024</a></li>
-	<li><a href='https://materialsvirtuallab.org/2024/05/'>May 2024</a></li>
-	<li><a href='https://materialsvirtuallab.org/2024/04/'>April 2024</a></li>
-	<li><a href='https://materialsvirtuallab.org/2024/03/'>March 2024</a></li>
-	<li><a href='https://materialsvirtuallab.org/2024/02/'>February 2024</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/11/'>November 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/07/'>July 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/06/'>June 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/05/'>May 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/04/'>April 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/03/'>March 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2023/02/'>February 2023</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/11/'>November 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/10/'>October 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/09/'>September 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/07/'>July 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/05/'>May 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/03/'>March 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2022/02/'>February 2022</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/11/'>November 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/10/'>October 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/08/'>August 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/07/'>July 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/06/'>June 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/05/'>May 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/04/'>April 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/02/'>February 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2021/01/'>January 2021</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/12/'>December 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/09/'>September 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/08/'>August 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/07/'>July 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/06/'>June 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/04/'>April 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/02/'>February 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2020/01/'>January 2020</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/10/'>October 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/08/'>August 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/07/'>July 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/06/'>June 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/05/'>May 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/04/'>April 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/03/'>March 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/02/'>February 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2019/01/'>January 2019</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/12/'>December 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/11/'>November 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/09/'>September 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/06/'>June 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/05/'>May 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/03/'>March 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/02/'>February 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2018/01/'>January 2018</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/12/'>December 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/11/'>November 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/10/'>October 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/09/'>September 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/08/'>August 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/06/'>June 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/05/'>May 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/04/'>April 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/03/'>March 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/02/'>February 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2017/01/'>January 2017</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/12/'>December 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/11/'>November 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/10/'>October 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/09/'>September 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/08/'>August 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/07/'>July 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/06/'>June 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/05/'>May 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2016/03/'>March 2016</a></li>
-	<li><a href='https://materialsvirtuallab.org/2015/12/'>December 2015</a></li>
-	<li><a href='https://materialsvirtuallab.org/2015/11/'>November 2015</a></li>
-	<li><a href='https://materialsvirtuallab.org/2015/10/'>October 2015</a></li>
-	<li><a href='https://materialsvirtuallab.org/2015/08/'>August 2015</a></li>
-	<li><a href='https://materialsvirtuallab.org/2015/05/'>May 2015</a></li>
-	<li><a href='https://materialsvirtuallab.org/2015/01/'>January 2015</a></li>
-	<li><a href='https://materialsvirtuallab.org/2014/08/'>August 2014</a></li>
-	<li><a href='https://materialsvirtuallab.org/2014/07/'>July 2014</a></li>
-	<li><a href='https://materialsvirtuallab.org/2014/05/'>May 2014</a></li>
-	<li><a href='https://materialsvirtuallab.org/2013/10/'>October 2013</a></li>
-	<li><a href='https://materialsvirtuallab.org/2013/08/'>August 2013</a></li>
-			</ul>
-
-			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
-			<ul>
-					<li class="cat-item cat-item-13"><a href="https://materialsvirtuallab.org/category/announcements/">Announcements</a>
-</li>
-	<li class="cat-item cat-item-12"><a href="https://materialsvirtuallab.org/category/awards/">Awards</a>
-</li>
-	<li class="cat-item cat-item-16"><a href="https://materialsvirtuallab.org/category/announcements/matgenb/">matgenb</a>
-</li>
-	<li class="cat-item cat-item-14"><a href="https://materialsvirtuallab.org/category/news/">News</a>
-</li>
-	<li class="cat-item cat-item-19"><a href="https://materialsvirtuallab.org/category/presentations/">Presentations</a>
-</li>
-	<li class="cat-item cat-item-11"><a href="https://materialsvirtuallab.org/category/publications/">Publications</a>
-</li>
-	<li class="cat-item cat-item-18"><a href="https://materialsvirtuallab.org/category/software/">Software</a>
-</li>
-	<li class="cat-item cat-item-38"><a href="https://materialsvirtuallab.org/category/thoughts/">Thoughts</a>
-</li>
-			</ul>
-
-			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>
-		<ul>
-						<li><a href="https://materialsvirtuallab.org/wp-login.php">Log in</a></li>
-			<li><a href="https://materialsvirtuallab.org/feed/">Entries feed</a></li>
-			<li><a href="https://materialsvirtuallab.org/comments/feed/">Comments feed</a></li>
-
-			<li><a href="https://wordpress.org/">WordPress.org</a></li>
-		</ul>
-
-		</aside></div><!-- #secondary -->
-			</div>
-		</div>
-	</div><!-- #content -->
-
-	
-		
-		
-	<footer id="colophon" class="site-footer">
-		<div class="container">
-			<div class="site-info">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="sydney-credits">&copy; 2025 Materials Virtual Lab. Proudly powered by <a rel="nofollow" href="https://athemes.com/theme/sydney/">Sydney</a></div>					</div>
-					<div class="col-md-6">
-											</div>					
-				</div>
-			</div>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-	
-	
-</div><!-- #page -->
-
-<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round" /></svg></i></a><script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/sydney\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-<script type="text/javascript" id="sns_global_scripts">  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-75407640-4', 'auto');
-  ga('send', 'pageview');
-</script><link rel='stylesheet' id='genericons-css' href='https://c0.wp.com/p/jetpack/15.1.1/_inc/genericons/genericons/genericons.css' type='text/css' media='all' />
-<link rel='stylesheet' id='jetpack_social_media_icons_widget-css' href='https://c0.wp.com/p/jetpack/15.1.1/modules/widgets/social-media-icons/style.css' type='text/css' media='all' />
-<script type="text/javascript" src="https://materialsvirtuallab.org/wp-content/themes/sydney/js/functions.min.js?ver=20240822" id="sydney-functions-js"></script>
-<script type="text/javascript" src="https://materialsvirtuallab.org/wp-content/themes/sydney/js/scripts.js?ver=20250902" id="sydney-scripts-js"></script>
-<script type="text/javascript" src="https://materialsvirtuallab.org/wp-content/themes/sydney/js/hero-slider.js?ver=20250902" id="sydney-hero-slider-js"></script>
-<script type="text/javascript" src="https://materialsvirtuallab.org/wp-content/themes/sydney/js/so-legacy.js?ver=20250902" id="sydney-so-legacy-scripts-js"></script>
-<script type="text/javascript" src="https://materialsvirtuallab.org/wp-content/themes/sydney/js/so-legacy-main.min.js?ver=20250902" id="sydney-so-legacy-main-js"></script>
-<script type="text/javascript" id="jetpack-stats-js-before">
-/* <![CDATA[ */
-_stq = window._stq || [];
-_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"111975491\",\"post\":\"0\",\"tz\":\"-7\",\"srv\":\"materialsvirtuallab.org\",\"arch_home\":\"1\",\"j\":\"1:15.1.1\"}") ]);
-_stq.push([ "clickTrackerInit", "111975491", "0" ]);
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://stats.wp.com/e-202542.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
-	<script>
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-	</script>
-	
+        // 页面加载和窗口大小变化时调整导航
+        window.addEventListener('load', adjustNavForMobile);
+        window.addEventListener('resize', adjustNavForMobile);
+    </script>
 </body>
 </html>
+
