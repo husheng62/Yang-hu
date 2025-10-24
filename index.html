@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empa - AI-Powered Computational Materials Research</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+        }
+        
+        .ai-agent-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(46, 204, 113, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(155, 89, 182, 0.3) 0%, transparent 50%);
+            animation: pulse 8s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            100% { opacity: 0.8; }
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            z-index: 10;
+        }
+        
+        .logo img {
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-container {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+        }
+        
+        .main-nav {
+            display: flex;
+            list-style: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-item {
+            position: relative;
+            margin: 0 5px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 8px 12px;
+            display: block;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .nav-item a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            overflow: hidden;
+        }
+        
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown a {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f1f1f1;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown a:hover {
+            background-color: #f8f9fa;
+            padding-left: 20px;
+        }
+        
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+        
+        .search-container {
+            margin-left: 15px;
+        }
+        
+        .search-box {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .search-box input {
+            border: none;
+            padding: 8px 15px;
+            width: 200px;
+            outline: none;
+            background: transparent;
+        }
+        
+        .search-box button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-box button:hover {
+            background-color: #2980b9;
+        }
+        
+        .header-content {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            z-index: 5;
+            padding: 0 20px;
+        }
+        
+        .header-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Content Styles */
+        .content {
+            padding: 60px 0;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+            font-size: 1.8rem;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .news-item {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-item h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        
+        .news-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .news-date i {
+            margin-right: 8px;
+            color: #3498db;
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .research-card {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .research-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            transition: all 0.5s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+        }
+        
+        .research-card:hover::before {
+            transform: rotate(30deg) translate(10px, 10px);
+        }
+        
+        .research-card i {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .research-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .ai-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .ai-feature {
+            flex: 1;
+            min-width: 250px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .ai-feature h4 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ai-feature h4 i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 0 25px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 25px;
+            color: #3498db;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-section a:hover {
+            color: #3498db;
+            padding-left: 5px;
+        }
+        
+        .footer-section a i {
+            margin-right: 8px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            
+            .search-container {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .main-nav {
+                flex-wrap: wrap;
+            }
+            
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header-content p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                height: 400px;
+            }
+            
+            .logo img {
+                height: 50px;
+            }
+            
+            .nav-container {
+                top: 15px;
+                right: 15px;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                width: 180px;
+            }
+            
+            .nav-item {
+                margin: 3px 0;
+            }
+            
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+                margin-top: 5px;
+            }
+            
+            .nav-item:hover .dropdown {
+                display: block;
+            }
+            
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content p {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-image">
+            <div class="header-overlay"></div>
+            <div class="ai-agent-overlay"></div>
+        </div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/150x60/2c3e50/ffffff?text=Empa+CMR" alt="Empa Computational Materials Research Group Logo">
+        </div>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item">
+                    <a href="#">About</a>
+                    <div class="dropdown">
+                        <a href="https://materialsvirtuallab.org/mission-values/" target="_blank">Mission & Values</a>
+                        <a href="people.html">People</a>
+                        <a href="https://materialsvirtuallab.org/positions/" target="_blank">Positions</a>
+                        <a href="https://materialsvirtuallab.notion.site/" target="_blank">Guide</a>
+                        <a href="https://www.materialsvirtuallab.org/wiki" target="_blank">Members wiki</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="research.html">Research</a></li>
+                <li class="nav-item"><a href="publications.html">Publications</a></li>
+                <li class="nav-item"><a href="teaching.html">Teaching</a></li>
+                <li class="nav-item">
+                    <a href="#">Community</a>
+                    <div class="dropdown">
+                        <a href="https://materialsvirtuallab.org/software/" target="_blank">Software</a>
+                        <a href="https://matterverse.ai" target="_blank">matterverse.ai</a>
+                        <a href="http://crystalium.materialsvirtuallab.org" target="_blank">Crystalium</a>
+                        <a href="https://xas.crystals.ai" target="_blank">XAS-RF</a>
+                        <a href="http://matgenb.materialsvirtuallab.org" target="_blank">Matgenb</a>
+                        <a href="http://matgenie.materialsvirtuallab.org" target="_blank">Matgenie</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="https://www.youtube.com/c/MaterialsVirtualLab" target="_blank">Youtube</a></li>
+            </ul>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search materials, publications...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <h1>AI-Powered Computational Materials Research</h1>
+            <p>Leveraging artificial intelligence and advanced computational methods to accelerate the discovery and design of novel materials for a sustainable future.</p>
+        </div>
+    </header>
+    
+    <div class="container content">
+        <section class="section">
+            <h2>AI Agents in Materials Science</h2>
+            <p>At Empa's Computational Materials Research Group, we are pioneering the use of AI agents to transform how we discover, design, and optimize materials. Our intelligent systems autonomously explore the materials space, predict properties, and suggest novel compounds with tailored characteristics.</p>
+            
+            <div class="highlight-box">
+                <p>Our research integrates machine learning, quantum mechanical simulations, and high-throughput computing to create AI agents that can reason about materials at multiple scales - from atomic interactions to macroscopic properties.</p>
+            </div>
+            
+            <div class="ai-features">
+                <div class="ai-feature">
+                    <h4><i class="fas fa-robot"></i> Autonomous Discovery</h4>
+                    <p>AI agents that autonomously design and test new material compositions without human intervention.</p>
+                </div>
+                <div class="ai-feature">
+                    <h4><i class="fas fa-brain"></i> Predictive Modeling</h4>
+                    <p>Machine learning models that accurately predict material properties from composition and structure.</p>
+                </div>
+                <div class="ai-feature">
+                    <h4><i class="fas fa-project-diagram"></i> Multi-scale Integration</h4>
+                    <p>Seamlessly connecting quantum-level simulations with macroscopic material behavior.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Research Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <i class="fas fa-atom"></i>
+                    <h3>Quantum Simulations</h3>
+                    <p>First-principles calculations for accurate material property prediction</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI-Driven Discovery</h3>
+                    <p>Machine learning algorithms for accelerated materials screening</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-battery-full"></i>
+                    <h3>Energy Materials</h3>
+                    <p>Next-generation batteries, fuel cells, and energy storage systems</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>2D & Quantum Materials</h3>
+                    <p>Exploring novel properties of low-dimensional and quantum materials</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Latest Research Highlights</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <h3>Autonomous AI Agent for Battery Material Discovery</h3>
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> June 15, 2023</div>
+                    <p>Our team has developed a novel AI agent that autonomously designs and tests new solid-state electrolyte materials, accelerating discovery by 10x compared to traditional methods.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Generative AI for Catalyst Design</h3>
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> May 28, 2023</div>
+                    <p>We've created a generative AI model that proposes novel catalyst compositions for efficient electrochemical CO2 conversion, with several candidates now in experimental validation.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Materials Virtual Lab Platform 2.0</h3>
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> April 12, 2023</div>
+                    <p>Our updated platform now includes AI-assisted workflow generation and automated analysis tools, making advanced computational materials science accessible to non-experts.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Upcoming Events</h2>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+                <li><strong>July 10, 2023:</strong> International Conference on AI in Materials Science - Keynote on "Autonomous Materials Discovery"</li>
+                <li><strong>August 5, 2023:</strong> Workshop on AI Agents for High-Throughput Materials Screening</li>
+                <li><strong>September 15, 2023:</strong> Empa Open Day - Demonstrations of our AI-driven materials research platform</li>
+                <li><strong>October 20, 2023:</strong> Materials Genome Initiative Symposium - Presenting our latest AI agent frameworks</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Empa - Swiss Federal Laboratories for Materials Science and Technology</p>
+                    <p>Überlandstrasse 129</p>
+                    <p>8600 Dübendorf, Switzerland</p>
+                    <p><a href="mailto:cmr@empa.ch"><i class="fas fa-envelope"></i> cmr@empa.ch</a></p>
+                    <p><a href="tel:+41587654321"><i class="fas fa-phone"></i> +41 58 765 4321</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="research.html"><i class="fas fa-flask"></i> Research</a></li>
+                        <li><a href="publications.html"><i class="fas fa-file-alt"></i> Publications</a></li>
+                        <li><a href="https://materialsvirtuallab.org/software/" target="_blank"><i class="fas fa-download"></i> Software</a></li>
+                        <li><a href="https://materialsvirtuallab.org/positions/" target="_blank"><i class="fas fa-user-plus"></i> Open Positions</a></li>
+                        <li><a href="https://www.youtube.com/c/MaterialsVirtualLab" target="_blank"><i class="fab fa-youtube"></i> Youtube Channel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Collaborations</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-university"></i> ETH Zurich</a></li>
+                        <li><a href="#"><i class="fas fa-university"></i> EPFL</a></li>
+                        <li><a href="#"><i class="fas fa-atom"></i> PSI</a></li>
+                        <li><a href="#"><i class="fas fa-globe-europe"></i> European Projects</a></li>
+                        <li><a href="#"><i class="fas fa-industry"></i> Industry Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Empa - Computational Materials Research Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 搜索功能
+        document.querySelector('.search-box button').addEventListener('click', function() {
+            const searchTerm = document.querySelector('.search-box input').value;
+            if (searchTerm.trim() !== '') {
+                alert(`Searching for: ${searchTerm}`);
+                // 在实际应用中，这里可以添加实际的搜索逻辑
+            }
+        });
+
+        // 按回车键搜索
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.search-box button').click();
+            }
+        });
+
+        // 移动设备导航菜单切换
+        function adjustNavForMobile() {
+            const nav = document.querySelector('.main-nav');
+            const searchBox = document.querySelector('.search-box');
+            
+            if (window.innerWidth <= 768) {
+                if (!nav.classList.contains('mobile-nav')) {
+                    nav.classList.add('mobile-nav');
+                    // 在移动设备上，将搜索框移到导航下方
+                    document.querySelector('.nav-container').insertBefore(searchBox.parentNode, nav.nextSibling);
+                }
+            } else {
+                if (nav.classList.contains('mobile-nav')) {
+                    nav.classList.remove('mobile-nav');
+                    // 在桌面设备上，将搜索框移回原位
+                    document.querySelector('.nav-container').insertBefore(searchBox.parentNode, nav.nextSibling);
+                }
+            }
+        }
+
+        // 页面加载和窗口大小变化时调整导航
+        window.addEventListener('load', adjustNavForMobile);
+        window.addEventListener('resize', adjustNavForMobile);
+    </script>
+</body>
+</html>
